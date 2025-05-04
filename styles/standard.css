@@ -1,0 +1,26 @@
+/* Body Standards */
+:root{
+  
+        --farbe-hintergrund:#e6b8b75c;
+
+        /* fonts */
+        --main-font: 'InterCustom', sans-serif;
+}
+
+body{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: var(--main-font);
+}
+
+.standard_display_gap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+}
+
+
+
