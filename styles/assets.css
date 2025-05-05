@@ -1,1 +1,15 @@
 /* Für Button und Input fields */
+.btn {
+    padding: 10px 20px;
+    background-color: #ffaa33;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff8800;
+}

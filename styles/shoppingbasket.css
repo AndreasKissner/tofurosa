@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+}
+
+.basket_wrapper {
+    position: fixed;
+    top: 157px;
+    right: 10px;
+    width: 300px;
+    height: auto;
+    padding: 5px;
+    z-index: 2000;
+    padding: 5px;
+    /* Ganz oben sichtbar */
+}
+
+
+.basket {
+    position: sticky;
+    top: 0;
+    background-color: var(--farbe-hintergrund2);
+    width: 100%;
+    padding: 5px;
+}
+
+.pick_up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.adress {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.map-box-style {
+    max-width: 100%;
+    width: 100px;
+    /* Die Karte nimmt die gesamte Breite ein */
+    height: 100px;
+    /* Höhe der Karte */
+}
+
+
+.img_counter_price_trash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+}
+
+.basket_tofu_img_style,
+.basket_img_test,
+.standard_border_radius {
+    width: 100%;
+    max-width: 100px;
+}
+
+.name_price_container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.plus_minus_amount {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100px;
+}

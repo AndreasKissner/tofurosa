@@ -2,6 +2,7 @@
 :root{
   
         --farbe-hintergrund:#e6b8b75c;
+        --farbe-hintergrund2:#e6b8b7;
 
         /* fonts */
         --main-font: 'InterCustom', sans-serif;
@@ -20,6 +21,9 @@ body{
     align-items: center;
     justify-content: center;
     gap:15px;
+}
+.standard_border_radius{
+    border-radius: 5px;
 }
 
 

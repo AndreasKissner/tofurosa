@@ -14,10 +14,11 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sanfter Schatten unten */
     position: sticky;
     top: 0;
-    z-index: 1000;/* first level line */
+    /* first level line */
   }
 
   .img_container {
+  
     display: flex;
     justify-content: center; /* Logo zentrieren */
     align-items: center;
@@ -30,5 +31,15 @@
     height: auto;       /* behält Seitenverhältnis */
   }
 
+.login_box{
+    margin-right:30px;
+}
+.bg_img {
+    width: 100%;
+    height: 100vh;
+    background-image: url('./assets/img/bgtofofurosa.png');
+    background-size: cover;
+    background-position: top center;  /* Zeigt die obere Hälfte */
+    background-repeat: no-repeat;
+}
 
-  
