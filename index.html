@@ -2,299 +2,204 @@
 <html lang="de">
 
 <head>
-    <meta charset="utf-8">
-    <title>ShoppingApp</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/standard.css?v=1.1">
-    <link rel="stylesheet" href="./styles/fonts.css?v=1.0">
-    <link rel="stylesheet" href="style.css?v=1.0">
-    <link rel="stylesheet" href="./styles/assets.css?v=1.0">
+  <meta charset="utf-8">
+  <title>ShoppingApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/standard.css?v=1.1">
+  <link rel="stylesheet" href="./styles/fonts.css?v=1.0">
+  <link rel="stylesheet" href="style.css?v=1.0">
+  <link rel="stylesheet" href="./styles/assets.css?v=1.0">
 
-    <link rel="stylesheet" href="./styles/shoppingbasket.css?v=1.0">
-    <link rel="stylesheet" href="./styles/articlecontainer.css">
-    <link rel="icon" type="image/png" href="assets/icons/tofuflavicon.png">
-    <script src="./scripts/datenbank.js?v=1.0"></script>
-    <script src="script.js?v=1.0"></script>
+  <link rel="stylesheet" href="./styles/shoppingbasket.css?v=1.0">
+  <link rel="stylesheet" href="./styles/articlecontainer.css">
+  <link rel="icon" type="image/png" href="assets/icons/tofuflavicon.png">
+  <script src="./scripts/datenbank.js?v=1.0"></script>
+  <script src="script.js?v=1.0"></script>
 
 </head>
 
 <body>
-    <div class="wrapper_container">
+  <div class="wrapper_container">
 
-        <header id="header" class="header_content">
-            <div class="img_container">
-                <img class="logo_img" src="./assets/img/logo.png" alt="Logo Tofurosa">
-            </div>
-
-            <nav id="navigation" class="navi_style">
-                <ul class="navi_ul">
-                    <li class="menue_title_a btn"><a href="">Menü</a></li>
-                      <li class="menue_title_a btn"><a href="">Drinks</a></li>
-                    <li class="menue_title_a btn"><a href="">Impressum</a></li>
-                    <li class="menue_title_a btn"><a href="">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div class="sign_basket_container standard_display_gap">
-                <div class="login_box standard_display_gap">
-
-                   
-                    <button type="button" id="sign_in" class="btn" onclick="signIn()">Sign in</button>
-                    <button type="button" id="sign_out" class="btn" onclick="signOut()">Sign out</button>
-
-                </div>
-
-                <div class="basket_info standard_display_gap">
-                    <img src="./assets/icons/carticon.svg" alt="Icon shopping cart">
-                    <p class="basket_counter_header" id="counter_card"> 0</p>
-                </div>
-            </div>
-
-        </header>
-
-        <main id="main_content">
-
-            <section class="bg_img"></section>
-
-            <div class="basket_article_container">
-            <div class="basket_wrapper">
-                <div class="basket">
-
-                    <div id="pick_up_infos" class="pick_up">
-                        <div class="adress">
-                            <h2 class="pick_up_text">PICK UP AT </h2>
-                          <a href="" class="town">Courfaivre</a>
-                            <p><a href="2853 Courfaivre"><img src="./assets/icons/pick.svg" alt="Pick up Icon"></a></p>
-                        </div>
-                        <div id="map_box" class="map_box_style"><iframe title="map" class="map-box-style"
-                                src="https://www.openstreetmap.org/export/embed.html?bbox=7.284%2C47.325%2C7.304%2C47.335&layer=mapnik&marker=47.330%2C7.294"
-                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-                            </iframe>
-
-                        </div>
-                    </div>
-
-                    <div class="basket_name">
-                        <h3 class="h3_title">Your Order:</h3>
-                    </div>
-
-                    <div class="pick_or_delivery">
-                      <button id="btn_pick_up" class="btn">Delivery</button>
-                      <button id="btn_devlivery" class="btn">Pickup</button>
-                    </div>
-
-                    <div class="img_counter_price_trash">
-                        <div id="your_tofu_img" class="basket_tofu_img_style"><img
-                                class="basket_img_test standard_border_radius" src="tofu1.png" alt="">
-                        </div>
-                        <div class="name_price_container">
-                            <div id="name_of_tofu" class="name_of_tofu_style">Spicy Tofu Sambal</div>
-                            <div id="price_total" class="price_total_style">12.33</div>
-                        </div>
-
-                        <div class="plus_minus_amount">
-                            <div id="minus_amount-plus_container" class="amount_mini_container"></div>
-
-                            <button id="trash_btn" class="btn_counter_commande"><img class="trash_icon_img" src="assets/icons/trash.png" alt=""></button>
-
-                            <button type="button" class="btn_counter_commande" id="minus_article"><img class="icon_commade_btn" src="./assets/icons/remove.svg"
-                                    alt=""></button>
-
-                            <div id="sume_output" class="sume_output_style">x</div>
-                            <button type="button" id="plus_article" class="btn_counter_commande"><img class="icon_commade_btn"
-                                    src="./assets/icons/add.svg" alt="Add Icon"></button>
-                        </div>
-                    </div>
-
-                    <div class="img_counter_price_trash">
-                      <div id="your_tofu_img" class="basket_tofu_img_style"><img
-                              class="basket_img_test standard_border_radius" src="tofu1.png" alt="">
-                      </div>
-                      <div class="name_price_container">
-                          <div id="name_of_tofu" class="name_of_tofu_style">Spicy Tofu Sambal</div>
-                          <div id="price_total" class="price_total_style">12.33</div>
-                      </div>
-
-                      <div class="plus_minus_amount">
-                          <div id="minus_amount-plus_container" class="amount_mini_container"></div>
-                          <button type="button" class="btn_counter_commande" id="minus_article"><img class="icon_commade_btn" src="./assets/icons/remove.svg"
-                                  alt=""></button>
-
-                          <div id="sume_output" class="sume_output_style">x</div>
-                          <button type="button" id="plus_article" class="btn_counter_commande"><img class="icon_commade_btn"
-                                  src="./assets/icons/add.svg" alt="Add Icon"></button>
-                      </div>
-                  </div>
-                  <div class="img_counter_price_trash">
-                    <div id="your_tofu_img" class="basket_tofu_img_style"><img
-                            class="basket_img_test standard_border_radius" src="tofu1.png" alt="">
-                    </div>
-                    <div class="name_price_container">
-                        <div id="name_of_tofu" class="name_of_tofu_style">Spicy Tofu Sambal</div>
-                        <div id="price_total" class="price_total_style">12.33</div>
-                    </div>
-
-                    <div class="plus_minus_amount">
-                        <div id="minus_amount-plus_container" class="amount_mini_container"></div>
-                        <button type="button" class="btn_counter_commande" id="minus_article"><img class="icon_commade_btn" src="./assets/icons/remove.svg"
-                                alt=""></button>
-
-                        <div id="sume_output" class="sume_output_style">x</div>
-                        <button type="button" id="plus_article" class="btn_counter_commande"><img class="icon_commade_btn"
-                                src="./assets/icons/add.svg" alt="Add Icon"></button>
-                    </div>
-                </div>
-                <div class="img_counter_price_trash">
-                  <div id="your_tofu_img" class="basket_tofu_img_style"><img
-                          class="basket_img_test standard_border_radius" src="tofu1.png" alt="">
-                  </div>
-                  <div class="name_price_container">
-                      <div id="name_of_tofu" class="name_of_tofu_style">Spicy Tofu Sambal</div>
-                      <div id="price_total" class="price_total_style">12.33</div>
-                  </div>
-
-                  <div class="plus_minus_amount">
-                      <div id="minus_amount-plus_container" class="amount_mini_container"></div>
-                      <button type="button" class="btn_counter_commande" id="minus_article"><img class="icon_commade_btn" src="./assets/icons/remove.svg"
-                              alt=""></button>
-
-                      <div id="sume_output" class="sume_output_style">x</div>
-                      <button type="button" id="plus_article" class="btn_counter_commande"><img class="icon_commade_btn"
-                              src="./assets/icons/add.svg" alt="Add Icon"></button>
-                  </div>
-              </div>
-
-                       <div class="total_cost_content">
-                    <table class="summary_table">
-                      <tr>
-                          <td>Subtotal:</td>
-                          <td class="betrag" id="subtotal">196,40 €</td>
-                      </tr>
-                      <tr>
-                          <td>Shipping costs:</td>
-                          <td class="betrag" id="shipping">5,00 €</td>
-                      </tr>
-                      <tr class="gesamt_row">
-                          <td><strong>Total</strong></td>
-                          <td class="betrag" id="total">201,40 €</td>
-                      </tr>
-                  </table>
-                  </div>
-                </div>
-            </div> 
-
-
-          
-     
-<div class="article_basket_box">
-        <section id="article_container_all" class="arcticle_container_style_all">
-          <div class="container_article">
-            <div class="article_img_box">
-              <img class="img_article" src="tofu1.png" alt="">
-              <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
-              <div id="price_of_article" class="article_price_style">€</div>
-              <button id="counter_button" class="btn_counter">
-                <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-              </button>
-            </div>
-          </div>
-
-          
-
-           
-              <div class="container_article">
-                <div class="article_img_box">
-                  <img class="img_article" src="tofu1.png" alt="">
-                  <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
-                  <div id="price_of_article" class="article_price_style">€</div>
-                  <button id="counter_button" class="btn_counter">
-                    <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-                  </button>
-                </div>
-              </div>
-              <div class="container_article">
-                <div class="article_img_box">
-                  <img class="img_article" src="tofu1.png" alt="">
-                  <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
-                  <div id="price_of_article" class="article_price_style">€</div>
-                  <button id="counter_button" class="btn_counter">
-                    <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-                  </button>
-                </div>
-              </div>
-              <div class="container_article">
-                <div class="article_img_box">
-                  <img class="img_article" src="tofu1.png" alt="">
-                  <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
-                  <div id="price_of_article" class="article_price_style">€</div>
-                  <button id="counter_button" class="btn_counter">
-                    <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-                  </button>
-                </div>
-              </div>
-              <div class="container_article">
-                <div class="article_img_box">
-                  <img class="img_article" src="tofu1.png" alt="">
-                  <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
-                  <div id="price_of_article" class="article_price_style">€</div>
-                  <button id="counter_button" class="btn_counter">
-                    <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-                  </button>
-                </div>
-              </div>
-              <div class="container_article">
-                <div class="article_img_box">
-                  <img class="img_article" src="tofu1.png" alt="">
-                  <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
-                  <div id="price_of_article" class="article_price_style">€</div>
-                  <button id="counter_button" class="btn_counter">
-                    <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-                  </button>
-                </div>
-              </div>
-          
-
-              <div class="container_article">
-                <div class="article_img_box">
-                  <img class="img_article" src="tofu1.png" alt="">
-                  <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
-                  <div id="price_of_article" class="article_price_style">€</div>
-                  <button id="counter_button" class="btn_counter">
-                    <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-                  </button>
-                </div>
-              </div>
-              <div class="container_article">
-                <div class="article_img_box">
-                  <img class="img_article" src="tofu1.png" alt="">
-                  <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
-                  <div id="price_of_article" class="article_price_style">€</div>
-                  <button id="counter_button" class="btn_counter">
-                    <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-                  </button>
-                </div>
-              </div>
-              <div class="container_article">
-                <div class="article_img_box">
-                  <img class="img_article" src="tofu1.png" alt="">
-                  <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
-                  <div id="price_of_article" class="article_price_style">€</div>
-                  <button id="counter_button" class="btn_counter">
-                    <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-                  </button>
-                </div>
-              </div>
-         
-           
-        </section>
-        <section class="basket_container_right">
-          
-        </section>
+    <header id="header" class="header_content">
+      <div class="img_container">
+        <img class="logo_img" src="./assets/img/logo.png" alt="Logo Tofurosa">
       </div>
 
-    </div>
-        </main>
-    </div>
+      <nav id="navigation" class="navi_style">
+        <ul class="navi_ul">
+          <li class="menue_title_a btn"><a href="">Menü</a></li>
+          <li class="menue_title_a btn"><a href="">Drinks</a></li>
+          <li class="menue_title_a btn"><a href="">Impressum</a></li>
+          <li class="menue_title_a btn"><a href="">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="sign_basket_container standard_display_gap">
+        <div class="login_box standard_display_gap">
+
+
+          <button type="button" id="sign_in" class="btn" onclick="signIn()">Sign in</button>
+          <button type="button" id="sign_out" class="btn" onclick="signOut()">Sign out</button>
+
+        </div>
+
+        <div class="basket_info standard_display_gap">
+          <img src="./assets/icons/carticon.svg" alt="Icon shopping cart">
+          <p class="basket_counter_header" id="counter_card"> 0</p>
+        </div>
+      </div>
+
+    </header>
+
+    <main id="main_content">
+
+      <section class="bg_img"></section>
+
+      <div class="basket_article_container">
+        <div class="basket_wrapper">
+          <div class="basket">
+
+            <div id="pick_up_infos" class="pick_up">
+              <div class="adress">
+                <h2 class="pick_up_text">PICK UP AT </h2>
+                <a href="" class="town">Courfaivre</a>
+                <p><a href="2853 Courfaivre"><img src="./assets/icons/pick.svg" alt="Pick up Icon"></a></p>
+              </div>
+              <div id="map_box" class="map_box_style"><iframe title="map" class="map-box-style"
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=7.284%2C47.325%2C7.304%2C47.335&layer=mapnik&marker=47.330%2C7.294"
+                  frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                </iframe>
+
+              </div>
+            </div>
+
+            <div class="basket_name">
+              <h3 class="h3_title">Your Order:</h3>
+            </div>
+
+            <div class="pick_or_delivery">
+              <button id="btn_pick_up" class="btn">Delivery</button>
+              <button id="btn_devlivery" class="btn">Pickup</button>
+            </div>
+
+            <div class="img_counter_price_trash">
+              <div id="your_tofu_img" class="basket_tofu_img_style"><img class="basket_img_test standard_border_radius"
+                  src="tofu1.png" alt="">
+              </div>
+              <div class="name_price_container">
+                <div id="name_of_tofu" class="name_of_tofu_style">Spicy Tofu Sambal</div>
+                <div id="price_total" class="price_total_style">12.33</div>
+              </div>
+
+              <div class="plus_minus_amount">
+                <div id="minus_amount-plus_container" class="amount_mini_container"></div>
+
+                <button id="trash_btn" class="btn_counter_commande"><img class="trash_icon_img"
+                    src="assets/icons/trash.png" alt=""></button>
+
+                <button type="button" class="btn_counter_commande" id="minus_article"><img class="icon_commade_btn"
+                    src="./assets/icons/remove.svg" alt=""></button>
+
+                <div id="sume_output" class="sume_output_style">x</div>
+                <button type="button" id="plus_article" class="btn_counter_commande"><img class="icon_commade_btn"
+                    src="./assets/icons/add.svg" alt="Add Icon"></button>
+              </div>
+            </div>
+
+
+
+
+            <div class="total_cost_content">
+              <table class="summary_table">
+                <tr>
+                  <td>Subtotal:</td>
+                  <td class="betrag" id="subtotal">196,40 €</td>
+                </tr>
+                <tr>
+                  <td>Shipping costs:</td>
+                  <td class="betrag" id="shipping">5,00 €</td>
+                </tr>
+                <tr class="gesamt_row">
+                  <td><strong>Total</strong></td>
+                  <td class="betrag" id="total">201,40 €</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="article_basket_box">
+          <section id="article_container_all" class="arcticle_container_style_all">
+            <div class="container_article">
+              <div class="article_img_box">
+                <img class="img_article" src="tofu1.png" alt="">
+                <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
+                <div id="price_of_article" class="article_price_style">€</div>
+                <button id="counter_button" class="btn_counter">
+                  <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_article" id="article_container_box">
+              <div class="article_img_box">
+                <img class="img_article" src="tofu1.png" alt="">
+                <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
+                <div id="price_of_article" class="article_price_style">€</div>
+                <button id="counter_button" class="btn_counter">
+                  <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_article">
+              <div class="article_img_box">
+                <img class="img_article" src="tofu1.png" alt="">
+                <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
+                <div id="price_of_article" class="article_price_style">€</div>
+                <button id="counter_button" class="btn_counter">
+                  <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
+                </button>
+              </div>
+            </div>
+
+            <div class="container_article">
+              <div class="article_img_box">
+                <img class="img_article" src="tofu1.png" alt="">
+                <div id="name_of_article" class="name_style_article">Spicy Tofu Sambal</div>
+                <div id="price_of_article" class="article_price_style">€</div>
+                <button id="counter_button" class="btn_counter">
+                  <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section id="drink_container_all" class="drink_container_style_all">
+            <div class="drinks_container" id="drinks_container_box">
+              <div class="drinks_img_box">
+                <img class="img_drink" src="assets/img/drinks/drink1.png" alt="">
+                <div id="name_of_drink" class="name_style_drink">Golden Citrus Delight</div>
+                <div id="price_of_drink" class="drink_price_style">€</div>
+
+                <button id="counter_button_drinks" class="btn_counter">
+                  <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
+                  
+                </button>
+              </div>
+            </div>
+          </section>
+
+
+        </div>
+
+      </div>
+    </main>
+  </div>
 
 </body>
 

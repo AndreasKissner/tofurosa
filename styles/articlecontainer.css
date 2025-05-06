@@ -2,7 +2,7 @@
     width: calc(100% - 308px);
 }
 
-.arcticle_container_style_all {
+.arcticle_container_style_all, .drink_container_style_all{
     width: 100%;
     max-width: 1960px;
     height: auto;
@@ -16,18 +16,18 @@
 }
 
 
-.container_article {
+.container_article, .drinks_container {
     width: 250px;
     height: 310px;
 }
 
-.article_img_box {
+.article_img_box, .drinks_img_box {
     position: relative;
     width: 250px;
     height: 300px;
 }
 
-.img_article {
+.img_article, .img_drink {
     object-fit: cover;
     display: block;
     width: 250px;
@@ -37,7 +37,7 @@
 
 
 .name_style_article,
-.article_price_style {
+.article_price_style, .drink_price_style, .name_style_drink {
     margin-top: 5px;
     font-size: 24px;
 }
