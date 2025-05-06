@@ -1,14 +1,21 @@
 /* Body Standards */
 :root{
   
-        --farbe-hintergrund:#e6b8b75c;
-        --farbe-hintergrund2:#e6b8b7;
+        --farbe-hintergrund:#fdf6e3b6;
+        --farbe-hintergrund2:#e6dfb7;
+        --color_whit: white;
 
         /* fonts */
         --main-font: 'InterCustom', sans-serif;
 }
 
+*{
+    text-decoration: none;
+    list-style: none;
+}
+
 body{
+     width: 100%;
     margin:0;
     padding:0;
     box-sizing: border-box;
@@ -20,8 +27,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap:15px;
+
 }
+
+
 .standard_border_radius{
     border-radius: 5px;
 }

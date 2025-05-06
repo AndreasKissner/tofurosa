@@ -3,15 +3,18 @@
 }
 
 .basket_wrapper {
+    position: absolute;
     position: fixed;
     top: 157px;
     right: 10px;
-    width: 300px;
+    width: 100%;
+   max-width: 300px;
     height: auto;
     padding: 5px;
     z-index: 2000;
     padding: 5px;
     /* Ganz oben sichtbar */
+  
 }
 
 
@@ -40,9 +43,9 @@
 
 .map-box-style {
     max-width: 100%;
-    width: 100px;
+    width: 130px;
     /* Die Karte nimmt die gesamte Breite ein */
-    height: 100px;
+    height: 130px;
     /* Höhe der Karte */
 }
 
@@ -58,10 +61,10 @@
 }
 
 .basket_tofu_img_style,
-.basket_img_test,
-.standard_border_radius {
+.basket_img_test {
     width: 100%;
     max-width: 100px;
+    object-fit: cover;
 }
 
 .name_price_container {

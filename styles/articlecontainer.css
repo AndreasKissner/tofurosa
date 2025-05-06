@@ -1,0 +1,56 @@
+.arcticle_container_style_all{
+    width: 100%;
+    max-width: 1960px;
+    height: auto;
+    background-color:var(--farbe-hintergrund) ;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+gap:10px;
+    padding:16px 0;
+}
+
+.container_article{
+    width: 250px;
+    height: 310px;
+   /*  background-color:yellow; */
+}
+.article_img_box {
+    position: relative;
+    width: 250px;
+    height: 300px;   
+}
+
+.img_article {
+    object-fit: cover;
+    display: block;
+    width: 250px;
+    height: 250px;
+    border-radius: 5px;
+}
+
+
+.btn_counter_img {
+    position: absolute;
+    top: 211px;  
+    right: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px;
+    cursor: pointer;
+}
+.btn_counter_img{
+  width: 32px;
+    height: 32px;
+   
+}
+
+.name_style_article, .article_price_style{
+    margin-top: 5px;
+    font-size: 24px;
+}
