@@ -1,63 +1,73 @@
+
+.main_content{
+ height: auto;
+}
 .wrapper_container {
   max-width: 1960px;
-  margin: 0 auto;
+  margin:auto
 }
 
+.basket_article_container{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row-reverse;
+}
 
 .header_content {
-    background-color: var(--farbe-hintergrund);
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;         
-    padding: 16px  32px;            
-    
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* sanfter Schatten unten */
-    position: sticky;
-    top: 0;
-    z-index: 2000;
-    /* first level line */
-  }
-
-  .img_container {
-    display: flex;
-    justify-content: center; /* Logo zentrieren */
-    align-items: center;
-    padding: 1rem; /* etwas Innenabstand */
-  }
-  
-  .logo_img {
-    max-width: 200px;   /* maximale Breite */
-    width: 100%;        /* skaliert mit Container */
-    height: auto;       /* behält Seitenverhältnis */
-  }
-
-  .navi_style{
-    width: 100%;
-    height: 50px;
-    max-width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .navi_ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 700px;
-  }
- 
-
-.login_box{
-    margin-right:30px;
+  background-color: var(--farbe-hintergrund);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  /*  first level line  */
 }
+
+.img_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16xp;
+}
+
+.logo_img {
+  max-width: 200px; 
+  width: 100%;
+  height: auto;
+}
+
+.navi_style {
+  width: 100%;
+  height: 50px;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navi_ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+}
+
+
+.login_box {
+  margin-right: 30px;
+}
+
 .bg_img {
-    width: 100%;
-    height: 100vh;
-    background-image: url('./assets/img/bgtofofurosa.png');
-    background-size: cover;
-    background-position: top center;  /* Zeigt die obere Hälfte */
-    background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-image: url('./assets/img/bgtofofurosa.png');
+  background-size: cover;
+  background-position: top center; /* Zeigt die obere Hälfte */
+  background-repeat: no-repeat;
+ 
 }
-

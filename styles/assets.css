@@ -14,3 +14,37 @@
 .btn:hover {
     background-color: #ff8800;
 }
+
+
+.btn_counter {
+    position: absolute;
+    top: 211px;  
+    right: 5px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+
+.btn_counter_img, .icon_commade_btn {
+    width: 22px;
+    height: 25px;
+}
+
+
+.btn_counter_commande{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px;
+    cursor: pointer;
+}
+

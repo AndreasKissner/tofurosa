@@ -3,41 +3,47 @@
 }
 
 .basket_wrapper {
-    position: absolute;
-    position: fixed;
-    top: 157px;
-    right: 10px;
-    width: 100%;
-   max-width: 300px;
-    height: auto;
-    padding: 5px;
+  position: sticky;
+    top: 125px;   
+
+    width: auto;
+    max-width: 300px;
+    max-height: 80vh;
+    overflow-y: auto;
     z-index: 2000;
-    padding: 5px;
-    /* Ganz oben sichtbar */
-  
 }
 
-
 .basket {
-    position: sticky;
+  position: static;
     top: 0;
-    background-color: var(--farbe-hintergrund2);
+    background-color: var(--farbe-shoppingBAsket);
     width: 100%;
-    padding: 5px;
 }
 
 .pick_up {
+    padding:5px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 55px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
+}
+
+.pick_up_text {
+    font-size: 20px;
+    text-align: center;
+}
+
+.town {
+    font: 10px;
 }
 
 .adress {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 
@@ -49,15 +55,41 @@
     /* Höhe der Karte */
 }
 
+.town {
+    font-weight: 900;
+}
+
+.h3_title {
+    font-size: 32px;
+    margin: 10px 0;
+    text-align: center;
+}
+
 
 .img_counter_price_trash {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    padding:5px;
+    gap: 5px;
     border-top: 2px solid black;
     border-bottom: 2px solid black;
     margin-bottom: 5px;
+}
+
+.btn_trash_icon{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 2px;
+        cursor: pointer;
+}
+.trash_icon_img {
+    width: 22px;
+    height: 25px;
 }
 
 .basket_tofu_img_style,
@@ -75,9 +107,50 @@
 }
 
 .plus_minus_amount {
+    /* border: 2px solid black; */
+    border-radius: 50px;
+    padding: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 11px;
     width: 100%;
-    max-width: 100px;
+    max-width: 115px;
+    flex-wrap: wrap;
+
+}
+
+.remove_icon,
+.add_icon {
+    width: 15px;
+}
+
+.pick_or_delivery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.total_cost_content {
+    padding: 10px;
+}
+
+.summary_table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.summary_table td {
+    padding: 5px 0;
+}
+
+.betrag {
+    text-align: right;
+}
+
+.gesamt_row td {
+    font-weight: bold;
 }
