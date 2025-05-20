@@ -41,25 +41,141 @@ h1 {
   height: auto;
 }
 
-.navi_style {
-  width: 100%;
-  height: 50px;
-  max-width: 400px;
+.navi {
+width: 100%;
+  min-height: 80px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-end;
+
+color: white;
 }
 
-.navi_ul {
+.navi ul {
   display: flex;
+}
+
+.navi ul li {
+  height: 100%;
+  padding: 30px;
+}
+
+
+.navi ul li a {
+  color: white;
+  padding: 10px;
+  background-color: orange;
+  border-radius: 10px;
+  border: 3px solid white;
+  color: rgb(43, 42, 42);
+  transition: all 150ms ease-in;
+}
+
+.navi ul li a:hover {
+  background-color: rgba(255, 166, 0, 0.476);
+  border: 3px solid rgba(230, 159, 17, 0.394);
+}
+
+
+
+.toggle_button {
+  margin-bottom: 40px;
+  display: none; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 30px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 3000; 
+}
+
+.toggle_button .bar {
+  height: 4px;
+  width: 100%;
+  background-color: rgb(203, 141, 15);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+
+@media(max-width:850px) {
+  .toggle_button {
+    display: flex;
+  }
+
+  .navi {
+    flex-direction: column;
+    align-items: center; /* zentriert das Logo und den Button */
+    padding-top: 20px;
+  }
+
+.navi ul {
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+ .list_container {
+  background-color: grey;
+  display: none;
+  flex-direction: column;
+  align-items: center;  /* ✅ zentriert die Menüeinträge */
   justify-content: center;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  position: absolute;
+  top: 93px; /* Höhe deines festen Headers */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--farbe-hintergrund);
+  z-index: 1500; /* liegt über dem Content, unter dem Header */
+  border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+.list_container ul {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 700px;
+  padding: 0;
+  margin: 0;
 }
+
+
+
+  .list_container.active {
+    display: flex;
+  }
+
+  .list_container li {
+ 
+    text-align: center;
+    width: 100%;
+  }
+
+
+
+}
+
+
 
 .login_box {
   margin-right: 30px;
+}
+
+.title_dishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px;
 }
 
 .bg_img {
@@ -80,10 +196,10 @@ footer {
   background-color: var(--farbe-hintergrund);
   height: 74px;
   width: 100%;
- 
+
 }
 
-.logo_img_footer{
+.logo_img_footer {
 
   max-width: 140px;
   width: 100%;

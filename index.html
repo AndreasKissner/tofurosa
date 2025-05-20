@@ -20,20 +20,28 @@
 
 <body>
 
-  <header id="header" class="header_content">
+ <header id="header" class="header_content">
+      <img class="logo_img" src="./assets/img/logo.png" alt="Logo Tofurosa">
+  <nav class="navi">
 
-    <img class="logo_img" src="./assets/img/logo.png" alt="Logo Tofurosa">
 
+    <button class="toggle_button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
 
-    <nav id="navigation" class="navi_style">
-      <ul class="navi_ul">
-        <li class="menue_title_a btn"><a href="#menue_jumping">Menü</a></li>
-        <li class="menue_title_a btn"><a href="#drinks_jump">Drinks</a></li>
-        <li class="menue_title_a btn"><a href="#beilage_jumping">Supplements</a></li>
-        <li class="menue_title_a btn contact_btn"><a href="">Contact</a></li>
+    <div class="list_container" id="list_cont">
+      <ul>
+        <li><a href="#menue_jumping">Menü</a></li>
+        <li><a href="#drinks_jump">Drinks</a></li>
+        <li><a href="#beilage_jumping">Supplements</a></li>
+        <li><a href="">Contact</a></li>
       </ul>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
+
 
 
 
@@ -75,18 +83,18 @@
 
 
 
-        
+
         <div class="article_basket_box" id="menue_jumping">
-          <h1>Menu</h1>
+          <h1 class="title_dishes">Menu</h1>
           <section id="article_container_all" class="arcticle_container_style_all"></section>
 
           <div class="seperateur" id="drinks_jump"></div>
-          <h1>Drinks</h1>
+          <h1 class="title_dishes">Drinks</h1>
           <section id="drink_container_all" class="drink_container_style_all"></section>
 
 
           <div class="seperateur" id="beilage_jumping"></div>
-          <h1>Supplements</h1>
+          <h1 class="title_dishes">Supplements</h1>
           <section id="beilage_container_all" class="beilage_container_style_all"></section>
           <div class="seperateur"></div>
 
@@ -108,14 +116,11 @@
  -->
 
 
- <script src="./scripts/template.js"></script>
-<script src="./scripts/render.js"></script>
-<script src="./scripts/datenbank.js?v=1.0"></script>
-<script src="script.js?v=1.0"></script>
+  <script src="./scripts/template.js"></script>
+  <script src="./scripts/render.js"></script>
+  <script src="./scripts/datenbank.js?v=1.0"></script>
+  <script src="script.js?v=1.0"></script>
+  <script src="scripts/toggle.js"></script>
 </body>
 
 </html>
-
- 
-           
-            

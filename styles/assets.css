@@ -1,25 +1,9 @@
-/* Für Button und Input fields */
-.btn {
-    padding: 10px 20px;
-    background-color: #ffaa33;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-right: 16px;;
-}
 
-.btn:hover {
-    background-color: #ff8800;
-}
-
-
-.btn_counter, .btn_counter_remove {
+.btn_counter,
+.btn_counter_remove {
     position: absolute;
-    top: 211px;  
-    right: 5px; 
+    top: 211px;
+    right: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,26 +14,38 @@
     cursor: pointer;
 }
 
-.btn_counter_remove{
-    top:211px;
-    right: 216px;
+.btn_counter_commande {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 2px;
+    cursor: pointer;
 }
 
 
-.btn_counter_img, .icon_commade_btn {
+.btn_counter_remove {
+    top: 211px;
+    right: 216px;
+}
+
+.btn_counter:hover,
+.btn_counter_remove:hover,
+.btn_counter_commande:hover {
+    border-bottom: 4px solid rgb(26, 2, 2);
+    background-color: #ffaa33;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+
+.btn_counter_img,
+.icon_commade_btn {
     width: 22px;
     height: 25px;
 }
 
 
-.btn_counter_commande{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 2px;
-    cursor: pointer;
-}
 

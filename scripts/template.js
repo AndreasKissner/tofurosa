@@ -67,8 +67,7 @@ function getBasketItemTemplate(cat, item) {
     return `
     <div class="img_counter_price_trash">
       <div class="basket_tofu_img_style">
-        <img class="basket_img_test standard_border_radius" <img src="assets/img/${item.image}" alt="">
->
+        <img class="basket_img_test standard_border_radius" src="assets/img/${item.image}" alt="">
       </div>
       <div class="name_price_container">
         <div class="name_of_tofu_style">${item.name}</div>
@@ -78,21 +77,32 @@ function getBasketItemTemplate(cat, item) {
         <button onclick="removeArticle('${cat}', '${item.name}')" class="btn_counter_commande">
           <img class="icon_commade_btn" src="./assets/icons/remove.svg" alt="">
         </button>
+
+
         <div class="amount_output_style">${item.amount}</div>
+
         <button onclick="addArticle('${cat}', '${item.name}')" class="btn_counter_commande">
           <img class="icon_commade_btn" src="./assets/icons/add.svg" alt="">
+        </button>
+        
+        <button onclick="clearProduct('${cat}', '${item.name}')" class="btn_counter_commande">
+          <img class="icon_commade_btn" src="assets/icons/trash.png" alt="Trash Icon">
         </button>
       </div>
     </div>`;
 }
 
+
 function getBasketSummaryTemplate(subtotal) {
+    const shipping = deliveryType === "delivery" ? 5 : 0;
+    const total = subtotal + shipping;
+
     return `
     <div class="total_cost_content" id="content_total_cost">
       <table class="summary_table">
         <tr><td>Subtotal:</td><td class="betrag" id="subtotal">${subtotal.toFixed(2)} $</td></tr>
-        <tr><td>Shipping:</td><td class="betrag" id="shipping">0.00 $</td></tr>
-        <tr class="gesamt_row"><td><strong>Total</strong></td><td class="betrag" id="total">${subtotal.toFixed(2)} $</td></tr>
+        <tr><td>Shipping:</td><td class="betrag" id="shipping">${shipping.toFixed(2)} $</td></tr>
+        <tr class="gesamt_row"><td><strong>Total</strong></td><td class="betrag" id="total">${total.toFixed(2)} $</td></tr>
       </table>
       <button onclick="clearBasket()" class="btn_counter_commande">
         <img class="icon_commade_btn" src="assets/icons/trash.png" alt="Trash Icon">

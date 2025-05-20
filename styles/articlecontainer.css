@@ -15,7 +15,7 @@
     flex-wrap: wrap;
     align-items: flex-start;    
     gap: 10px;
-/*     padding: 16px 0; */
+
 }
 
 .container_article, .drinks_container, .beilage_container {
