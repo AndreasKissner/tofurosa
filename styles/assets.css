@@ -16,7 +16,7 @@
 }
 
 
-.btn_counter {
+.btn_counter, .btn_counter_remove {
     position: absolute;
     top: 211px;  
     right: 5px; 
@@ -28,6 +28,11 @@
     border-radius: 4px;
     padding: 2px;
     cursor: pointer;
+}
+
+.btn_counter_remove{
+    top:211px;
+    right: 216px;
 }
 
 
