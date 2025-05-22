@@ -25,7 +25,6 @@
     cursor: pointer;
 }
 
-
 .btn_counter_remove {
     top: 211px;
     right: 216px;
@@ -34,12 +33,11 @@
 .btn_counter:hover,
 .btn_counter_remove:hover,
 .btn_counter_commande:hover {
-    border-bottom: 4px solid rgb(26, 2, 2);
+
     background-color: #ffaa33;
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
-
 
 .btn_counter_img,
 .icon_commade_btn {

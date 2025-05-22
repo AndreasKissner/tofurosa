@@ -12,7 +12,6 @@ function renderBasketCart() {
     const basket = document.getElementById("img_price_amount_items");
     basket.innerHTML = "";
     let subtotal = 0;
-
     for (let cat in myMenu) {
         myMenu[cat].forEach(item => {
             if (item.amount > 0) {
@@ -23,6 +22,8 @@ function renderBasketCart() {
     }
     basket.innerHTML += getBasketSummaryTemplate(subtotal);
 }
+
+
 
 window.addEventListener("load", () => {
     renderAllItems("article_container_all", myMenu.products, getRandomProductsItems);

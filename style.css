@@ -1,5 +1,9 @@
-.main_content {
+#main_content {
   height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .wrapper_container {
@@ -12,10 +16,10 @@ h1 {
 }
 
 .basket_article_container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: row-reverse;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row-reverse;
 }
 
 .header_content {
@@ -45,6 +49,7 @@ h1 {
 width: 100%;
   min-height: 80px;
   display: flex;
+  margin-right: 44px;
   align-items: center;
   justify-content: flex-end;
 
@@ -133,7 +138,7 @@ color: white;
   padding: 10px 0;
   position: absolute;
   top: 93px; /* Höhe deines festen Headers */
-  left: 50%;
+  left: 43%;
   transform: translateX(-50%);
   background-color: var(--farbe-hintergrund);
   z-index: 1500; /* liegt über dem Content, unter dem Header */
@@ -206,3 +211,4 @@ footer {
   height: auto;
 
 }
+

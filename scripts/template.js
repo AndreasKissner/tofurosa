@@ -73,18 +73,17 @@ function getBasketItemTemplate(cat, item) {
         <div class="name_of_tofu_style">${item.name}</div>
         <div class="price_total_style">${(item.price * item.amount).toFixed(2)} $</div>
       </div>
+      
       <div class="plus_minus_amount">
         <button onclick="removeArticle('${cat}', '${item.name}')" class="btn_counter_commande">
           <img class="icon_commade_btn" src="./assets/icons/remove.svg" alt="">
         </button>
 
-
         <div class="amount_output_style">${item.amount}</div>
-
         <button onclick="addArticle('${cat}', '${item.name}')" class="btn_counter_commande">
           <img class="icon_commade_btn" src="./assets/icons/add.svg" alt="">
         </button>
-        
+
         <button onclick="clearProduct('${cat}', '${item.name}')" class="btn_counter_commande">
           <img class="icon_commade_btn" src="assets/icons/trash.png" alt="Trash Icon">
         </button>
@@ -92,11 +91,9 @@ function getBasketItemTemplate(cat, item) {
     </div>`;
 }
 
-
 function getBasketSummaryTemplate(subtotal) {
     const shipping = deliveryType === "delivery" ? 5 : 0;
     const total = subtotal + shipping;
-
     return `
     <div class="total_cost_content" id="content_total_cost">
       <table class="summary_table">

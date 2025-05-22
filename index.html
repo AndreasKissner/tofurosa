@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>ShoppingApp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShoppingApp</title>
   <link rel="stylesheet" href="./styles/standard.css?v=1.1">
   <link rel="stylesheet" href="./styles/fonts.css?v=1.0">
   <link rel="stylesheet" href="style.css?v=1.0">
@@ -20,33 +20,33 @@
 
 <body>
 
- <header id="header" class="header_content">
-      <img class="logo_img" src="./assets/img/logo.png" alt="Logo Tofurosa">
-  <nav class="navi">
+  <header id="header" class="header_content">
 
+    <img class="logo_img" src="./assets/img/logo.png" alt="Logo Tofurosa">
 
-    <button class="toggle_button">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>
-    </button>
+    <nav class="navi">
+      <button type="button" class="toggle_button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
 
-    <div class="list_container" id="list_cont">
-      <ul>
-        <li><a href="#menue_jumping">Menü</a></li>
-        <li><a href="#drinks_jump">Drinks</a></li>
-        <li><a href="#beilage_jumping">Supplements</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
-</header>
+      <div class="list_container" id="list_cont">
+        <ul>
+          <li><a href="#menue_jumping">Menü</a></li>
+          <li><a href="#drinks_jump">Drinks</a></li>
+          <li><a href="#beilage_jumping">Supplements</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
 
 
 
   <div class="wrapper_container">
-    <main id="main_content">
+    <div id="main_content">
       <section class="bg_img"></section>
 
       <div class="basket_article_container">
@@ -76,8 +76,8 @@
 
             <!-- Basket Render-->
             <div id="img_price_amount_items"></div>
-
           </div>
+          
         </div>
 
 
@@ -97,13 +97,11 @@
           <h1 class="title_dishes">Supplements</h1>
           <section id="beilage_container_all" class="beilage_container_style_all"></section>
           <div class="seperateur"></div>
-
         </div>
-
-
       </div>
-    </main>
+    </div>
   </div>
+     <button id="toggleBasketBtn" class="basket_toggle_btn">SHOW SHOPPING CART</button>
 
   <!--   <footer class="standard_display_gap">
       <img class="logo_img_footer" src="./assets/img/logo.png" alt="Logo Tofurosa">
