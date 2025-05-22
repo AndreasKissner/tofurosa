@@ -14,3 +14,25 @@ for (let i = 0; i < navLinks.length; i++) {
     listContainer.classList.remove("active");
   });
 }
+
+
+function initBasketToggle() {
+  const toggleBtn = document.getElementById("toggleBasketBtn");
+  const basket = document.querySelector(".basket_wrapper");
+
+  if (!toggleBtn || !basket) return;
+
+  toggleBtn.addEventListener("click", () => {
+    basket.classList.toggle("visible");
+
+    const isVisible = basket.classList.contains("visible");
+    toggleBtn.textContent = isVisible
+      ? "🛒 Warenkorb verbergen"
+      : "🛒 Warenkorb anzeigen";
+  });
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", initBasketToggle);

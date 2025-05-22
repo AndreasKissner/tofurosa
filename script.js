@@ -6,29 +6,26 @@ function setDelivery(type) {
 }
 
 
-function addArticle(category, name) {
+function updateArticle(category, name, action) {
     let item = myMenu[category].find(p => p.name === name);
-    if (item) {
+    if (!item) return;
+
+    if (action === "add") {
         item.amount++;
-        renderBasketCart();
     }
-}
 
-function removeArticle(category, name) {
-    let item = myMenu[category].find(p => p.name === name);
-    if (item && item.amount > 0) {
+    if (action === "remove" && item.amount > 0) {
         item.amount--;
-        renderBasketCart();
     }
+
+    if (action === "clear") {
+        item.amount = 0;
+    }
+
+    renderBasketCart();
 }
 
-function clearProduct(category, name) {
-    let item = myMenu[category].find(p => p.name === name);
-    if (item) {
-        item.amount = 0;
-        renderBasketCart();
-    }
-}
+
 
 function clearBasket() {
     for (let cat in myMenu) {
@@ -37,29 +34,11 @@ function clearBasket() {
     renderBasketCart();
 }
 
-function initBasketToggle() {
-  const toggleBtn = document.getElementById("toggleBasketBtn");
-  const basket = document.querySelector(".basket_wrapper");
-
-  if (!toggleBtn || !basket) return;
-
-  toggleBtn.addEventListener("click", () => {
-    basket.classList.toggle("visible");
-
-    const isVisible = basket.classList.contains("visible");
-    toggleBtn.textContent = isVisible
-      ? "🛒 Warenkorb verbergen"
-      : "🛒 Warenkorb anzeigen";
-  });
-}
 
 
-document.addEventListener("DOMContentLoaded", initBasketToggle);
-
-
-window.setDelivery = setDelivery;
+/* window.setDelivery = setDelivery;
 window.clearBasket = clearBasket;
 window.clearProduct = clearProduct; // damit onclick funktioniert
 window.addArticle = addArticle;
 window.removeArticle = removeArticle;
-window. initBasketToggle =  initBasketToggle;
+window. initBasketToggle =  initBasketToggle; */
