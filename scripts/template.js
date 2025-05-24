@@ -1,68 +1,83 @@
-
-function getRandomProductsItems(productArr){
-    return `
+function getRandomProductsItems(productArr) {
+  const id = productArr.name.replace(/\s+/g, "_"); // ID-Sicher
+  return `
     <div class="container_article">
       <div class="article_img_box">
         <img class="img_article" src="assets/img/${productArr.image}" alt="">
 
-        <div id="name_of_article" class="name_style_article">${productArr.name}</div>
-        <div id="discription_of_article" class="description_style_article">${productArr.description}</div>
-        <div id="price_of_article" class="article_price_style">Price: ${productArr.price.toFixed(2)} </div>
-      
-                
-        <button onclick="updateArticle('products', '${productArr.name}', 'add')" id="counter_button_add" class="btn_counter">
-          <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-        </button>
+        <div class="name_style_article">${productArr.name}</div>
+        <div class="description_style_article">${productArr.description}</div>
+        <div class="article_price_style">Price: ${productArr.price.toFixed(2)}</div>
 
-       
-         
-        <button onclick="updateArticle('products', '${productArr.name}', 'remove')" id="counter_button_remove" class="btn_counter_remove">
-          <img src="assets/icons/remove.svg" alt="Icon remove Article" class="btn_counter_img">
-        </button>
+     
+          <button onclick="updateArticle('products', '${productArr.name}', 'remove')"
+           id="counter_button_add" class="btn_counter">
+            <img src="assets/icons/remove.svg" alt="remove" class="btn_counter_img">
+          </button>
+
+          <span id="amount_products_${id}" class="counter_display">${productArr.amount} </span>
+
+          <button onclick="updateArticle('products', '${productArr.name}', 'add')"
+           id="counter_button_remove" class="btn_counter_remove">
+            <img src="assets/icons/add.svg" alt="add" class="btn_counter_img">
+          </button>
+     
       </div>
     </div>`;
 }
 
 
-function getRandomDrinksItems(drinksArr){
-    return `
-    <div class="drinks_container" id="drinks_container_box">
+function getRandomDrinksItems(drinksArr) {
+  const id = drinksArr.name.replace(/\s+/g, "_");
+  return `
+    <div class="drinks_container">
       <div class="drinks_img_box">
         <img class="img_drink" src="assets/img/${drinksArr.image}" alt="">
-
         <div class="name_style_drink">${drinksArr.name}</div>
         <div class="description_style_drink">${drinksArr.description}</div>
         <div class="drink_price_style">Price: ${drinksArr.price.toFixed(2)} $</div>
 
-        <button onclick="updateArticle('drinks', '${drinksArr.name}', 'add')" class="btn_counter">
-          <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-        </button>
+        <div class="counter_wrapper">
+          <button onclick="updateArticle('drinks', '${drinksArr.name}', 'remove')">
+            <img src="assets/icons/remove.svg" alt="remove" class="btn_counter_img">
+          </button>
 
-        <button onclick="updateArticle('drinks', '${drinksArr.name}', 'remove')" class="btn_counter_remove">
-          <img src="assets/icons/remove.svg" alt="Icon remove Article" class="btn_counter_img">
-        </button>
+          <span id="amount_drinks_${id}" class="counter_display">${drinksArr.amount}</span>
+
+          <button onclick="updateArticle('drinks', '${drinksArr.name}', 'add')">
+            <img src="assets/icons/add.svg" alt="add" class="btn_counter_img">
+          </button>
+        </div>
       </div>
     </div>`;
 }
 
 
-function getRandomSubbTemplate(subbArr){
-    return `
-    <div class="beilage_container" id="beilage_container_box">
+function getRandomSubbTemplate(subbArr) {
+  const id = subbArr.name.replace(/\s+/g, "_");
+  return `
+    <div class="beilage_container">
       <div class="beilage_img_box">
         <img class="img_beilage" src="assets/img/${subbArr.image}" alt="">
         <div class="name_style_drink">${subbArr.name}</div>
         <div class="description_style_drink">${subbArr.description}</div>
         <div class="beilage_price_style">Price: ${subbArr.price.toFixed(2)} $</div>
-        <button onclick="updateArticle('supplements', '${subbArr.name}', 'add')" class="btn_counter">
-          <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
-        </button>
-        <button onclick="updateArticle('supplements', '${subbArr.name}', 'remove')" class="btn_counter_remove">
-          <img src="assets/icons/remove.svg" alt="Icon remove Article" class="btn_counter_img">
-        </button>
+
+        <div class="counter_wrapper">
+          <button onclick="updateArticle('supplements', '${subbArr.name}', 'remove')">
+            <img src="assets/icons/remove.svg" alt="remove" class="btn_counter_img">
+          </button>
+
+          <span id="amount_supplements_${id}" class="counter_display">${subbArr.amount}</span>
+
+          <button onclick="updateArticle('supplements', '${subbArr.name}', 'add')">
+            <img src="assets/icons/add.svg" alt="add" class="btn_counter_img">
+          </button>
+        </div>
       </div>
     </div>`;
 }
+
 
 function getBasketItemTemplate(cat, item) {
     return `

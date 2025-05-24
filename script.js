@@ -9,16 +9,18 @@ function updateArticle(category, name, action) {
     let item = myMenu[category].find(p => p.name === name);
     if (!item) return;
     if (action === "add") {
-        item.amount++;
-    }
+        item.amount++;}
     if (action === "remove" && item.amount > 0) {
-        item.amount--;
-    }
+        item.amount--;}
     if (action === "clear") {
-        item.amount = 0;
-    }
+        item.amount = 0;}
+    const safeId = name.replace(/\s+/g, "_");
+    const counterElement = document.getElementById(`amount_${category}_${safeId}`);
+    if (counterElement) {
+        counterElement.textContent = item.amount;}
     renderBasketCart();
 }
+
 
 function clearBasket() {
     for (let cat in myMenu) {
@@ -28,10 +30,9 @@ function clearBasket() {
 }
 
 //Emai Logig
-function sendMail(event){
+function sendMail(event) {
     event.preventDefault();
     const data = new FormData(event.target);
-
     fetch("https://formspree.io/f/mjkykvka", {
         method: "POST",
         body: new FormData(event.target),
@@ -39,7 +40,7 @@ function sendMail(event){
             'Accept': 'application/json'
         }
     }).then(() => {
-        window.location.href = "./send_mail.html";
+        window.location.href = "./html/sendmail.html";
     }).catch((error) => {
         console.log(error);
     });

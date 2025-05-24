@@ -22,22 +22,19 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 100px;
-    padding: 0 20px; /* etwas Rand für kleine Screens */
+    margin-top: 145px;
+    
 }
 
 .contact-content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 450px;   /* 👈 vorher war 600px */
+    max-width: 400px;   /* 👈 vorher war 600px */
     padding: 20px;       /* 👈 vorher war 25px */
     border-radius: 10px;
     margin-top: 30px;
-    background-image: url('./img/bg_email.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
 }
 
 
@@ -68,14 +65,17 @@ form {
 }
 
 .input-field-style {
-    border-radius: 10px;
-    padding: 10px;
     width: 100%;
-    background: var(--farbe-hintergrund);
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    border-radius: 5px;
+    padding:5px;
 }
 
+
 textarea {
-    height: 150px;
+    height: 50px;
     resize: none;
 }
 
@@ -88,7 +88,7 @@ footer {
     height: 93px;
     padding: 0 32px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-top: 2px solid grey;
     background-color: var(--farbe-hintergrund);
@@ -116,8 +116,8 @@ footer {
     }
 
     .center-contact {
-        margin-top: 60px;
-        padding: 0 10px;
+        margin-top: 100px;
+     
     }
 
     .contact-content {

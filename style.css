@@ -149,6 +149,7 @@ color: white;
     flex-direction: column;
     align-items: center; /* zentriert das Logo und den Button */
     padding-top: 20px;
+    margin-left: 20px;
   }
 
 .navi ul {
