@@ -1,15 +1,13 @@
-
-
-.plus_count_minus{
+.plus_count_minus {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
 }
+
 .btn_counter,
-.btn_counter_remove,.counter_display{
- 
-   
+.btn_counter_remove,
+.counter_display {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,7 +37,7 @@
 .btn_counter:hover,
 .btn_counter_remove:hover,
 .btn_counter_commande:hover,
-.counter_display:hover{
+.counter_display:hover {
     background-color: #ffaa33;
     transform: scale(1.1);
     transition: all 0.3s ease;
@@ -51,10 +49,10 @@
     height: 25px;
 }
 
- .counter_display{
-width: 30px;
+.counter_display {
+    width: 30px;
     background-color: white;
     border: 2px solid #121010;
     padding: 1px 7px;
     background-color: #ffaa33;
- }
+}

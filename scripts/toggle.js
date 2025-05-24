@@ -32,19 +32,6 @@ function initBasketToggle() {
   });
 }
 
-
-/* function zeigeDialog() {
-    const overlay = document.getElementById('dialogOverlay');
-    const closeButton = document.getElementById('closeDialog');
-
-    overlay.classList.remove('hidden');
-
-    closeButton.onclick = function () {
-        overlay.classList.add('hidden');
-    };
-} */
-
-
 document.addEventListener("DOMContentLoaded", initBasketToggle);
 document.addEventListener("DOMContentLoaded", initToggleMenu);
 document.addEventListener("DOMContentLoaded", initNavLinkClose);

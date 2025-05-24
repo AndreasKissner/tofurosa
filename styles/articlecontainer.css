@@ -1,9 +1,7 @@
 .article_basket_box {
     position: sticky;
     top: 125px;
-
     width: calc(100% - 300px);
-    
 }
 
 .arcticle_container_style_all,
@@ -29,6 +27,8 @@
     background-color: rgba(128, 128, 128, 0.247);
     width: 250px;
     height: 360px;
+    font-weight: bold;
+    text-align: center;
     border-radius: 5px;
 }
 
@@ -65,13 +65,9 @@
 }
 .description_style_article{
 font-size: 16px;
-
 }
 
-
-
 @media(max-width: 600px) {
-
     .arcticle_container_style_all,
     .drink_container_style_all,
     .beilage_container_style_all {

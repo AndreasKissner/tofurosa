@@ -4,7 +4,6 @@
     --farbe-hintergrund2: #e6dfb7;
     --farbe-shoppingBAsket: #e6d8cb;
     --color_whit: white;
-    /* fonts */
     --main-font: 'InterCustom', sans-serif;
 }
 
@@ -44,7 +43,6 @@ body {
     height: 10px;
     border-top: 3px solid black;
     background-color: lightgray;
-    /* nur zum Testen sichtbar */
 }
 
 @media(max-width: 1135px) {

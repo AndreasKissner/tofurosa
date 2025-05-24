@@ -124,10 +124,7 @@ color: white;
   margin-top: 6%;
 }
 
-
-
 @media(max-width: 1135px){
-   
     h1{
       color:orange;
         background-color: transparent;
@@ -147,7 +144,7 @@ color: white;
 
   .navi {
     flex-direction: column;
-    align-items: center; /* zentriert das Logo und den Button */
+    align-items: center; 
     padding-top: 20px;
     margin-left: 20px;
   }
@@ -164,17 +161,17 @@ color: white;
   background-color: grey;
   display: none;
   flex-direction: column;
-  align-items: center;  /* ✅ zentriert die Menüeinträge */
+  align-items: center;  
   justify-content: center;
   width: 100%;
   margin-top: 10px;
   padding: 10px 0;
   position: absolute;
-  top: 93px; /* Höhe deines festen Headers */
+  top: 93px; 
   left: 50%;
   transform: translateX(-50%);
   background-color: var(--farbe-hintergrund);
-  z-index: 1500; /* liegt über dem Content, unter dem Header */
+  z-index: 1500; 
   border-bottom: 2px solid rgba(0,0,0,0.1);
 }
 

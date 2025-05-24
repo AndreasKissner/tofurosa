@@ -47,14 +47,14 @@ let myMenu = {
     {
       name: "Blue Tonic",
       price: 5.90,
-      description: "Refreshing blue cocktail with a hint of citrus and tonic.",
+      description: "Refreshing cocktail with a hint of citrus and tonic.",
       amount: 0,
       image: "drinks/blue.png"
     },
     {
       name: "Classic Tofu Drink",
       price: 4.80,
-      description: "A light, fizzy drink with herbal notes and tofu essence.",
+      description: "A drink with herbal notes and essence.",
       amount: 0,
       image: "drinks/drink1.png"
     },
