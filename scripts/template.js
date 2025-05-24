@@ -7,12 +7,15 @@ function getRandomProductsItems(productArr){
 
         <div id="name_of_article" class="name_style_article">${productArr.name}</div>
         <div id="discription_of_article" class="description_style_article">${productArr.description}</div>
-        <div id="price_of_article" class="article_price_style">Price: ${productArr.price.toFixed(2)} $</div>
+        <div id="price_of_article" class="article_price_style">Price: ${productArr.price.toFixed(2)} </div>
+      
                 
         <button onclick="updateArticle('products', '${productArr.name}', 'add')" id="counter_button_add" class="btn_counter">
           <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
         </button>
+
        
+         
         <button onclick="updateArticle('products', '${productArr.name}', 'remove')" id="counter_button_remove" class="btn_counter_remove">
           <img src="assets/icons/remove.svg" alt="Icon remove Article" class="btn_counter_img">
         </button>
@@ -48,22 +51,18 @@ function getRandomSubbTemplate(subbArr){
     <div class="beilage_container" id="beilage_container_box">
       <div class="beilage_img_box">
         <img class="img_beilage" src="assets/img/${subbArr.image}" alt="">
-
         <div class="name_style_drink">${subbArr.name}</div>
         <div class="description_style_drink">${subbArr.description}</div>
         <div class="beilage_price_style">Price: ${subbArr.price.toFixed(2)} $</div>
-
         <button onclick="updateArticle('supplements', '${subbArr.name}', 'add')" class="btn_counter">
           <img src="assets/icons/add.svg" alt="Icon add Article" class="btn_counter_img">
         </button>
-
         <button onclick="updateArticle('supplements', '${subbArr.name}', 'remove')" class="btn_counter_remove">
           <img src="assets/icons/remove.svg" alt="Icon remove Article" class="btn_counter_img">
         </button>
       </div>
     </div>`;
 }
-
 
 function getBasketItemTemplate(cat, item) {
     return `
@@ -75,18 +74,15 @@ function getBasketItemTemplate(cat, item) {
         <div class="name_of_tofu_style">${item.name}</div>
         <div class="price_total_style">${(item.price * item.amount).toFixed(2)} $</div>
       </div>
-      
+    
       <div class="plus_minus_amount">
   <button onclick="updateArticle('${cat}', '${item.name}', 'remove')" class="btn_counter_commande">
     <img class="icon_commade_btn" src="./assets/icons/remove.svg" alt="">
   </button>
-
   <div class="amount_output_style">${item.amount}</div>
-
   <button onclick="updateArticle('${cat}', '${item.name}', 'add')" class="btn_counter_commande">
     <img class="icon_commade_btn" src="./assets/icons/add.svg" alt="">
   </button>
-
   <button onclick="updateArticle('${cat}', '${item.name}', 'clear')" class="btn_counter_commande">
     <img class="icon_commade_btn" src="assets/icons/trash.png" alt="Trash Icon">
   </button>
@@ -103,13 +99,15 @@ function getBasketSummaryTemplate(subtotal) {
         <tr><td>Subtotal:</td><td class="betrag" id="subtotal">${subtotal.toFixed(2)} $</td></tr>
         <tr><td>Shipping:</td><td class="betrag" id="shipping">${shipping.toFixed(2)} $</td></tr>
         <tr class="gesamt_row"><td><strong>Total</strong></td><td class="betrag" id="total">${total.toFixed(2)} $</td></tr>
-      </table>
-      <button onclick="clearBasket()" class="btn_counter_commande">
+         </table>
+         <div class="order_content">
+         <button onclick="clearBasket()" class="btn_counter_commande">
         <img class="icon_commade_btn" src="assets/icons/trash.png" alt="Trash Icon">
       </button>
+     <button id="no_order_overlay" class="no_order">Order</button>
+     </div>
     </div>`;
 }
-
 
 window.addEventListener("load", () => {
   renderAllItems("article_container_all", myMenu.products, getRandomProductsItems);

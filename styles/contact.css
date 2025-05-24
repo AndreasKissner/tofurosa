@@ -1,0 +1,127 @@
+html, body {
+  overflow-x: hidden;
+}
+
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* NUR horizontal zentrieren */
+    background-color: #f9f9f9;
+}
+
+.main_contact {
+    max-width: 1960px;
+    flex: 1;
+    width: 100%;
+    padding-bottom: 120px; /* Platz für Footer */
+}
+
+.center-contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    padding: 0 20px; /* etwas Rand für kleine Screens */
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;   /* 👈 vorher war 600px */
+    padding: 20px;       /* 👈 vorher war 25px */
+    border-radius: 10px;
+    margin-top: 30px;
+    background-image: url('./img/bg_email.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.title-contact {
+    border: 10px;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 15px;
+    color: rgb(11, 8, 8);
+    background-color: transparent;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(18, 17, 17);
+}
+
+.contact-fields-general {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 15px;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.input-field-style {
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    background: var(--farbe-hintergrund);
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 1960px;
+    height: 93px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid grey;
+    background-color: var(--farbe-hintergrund);
+    z-index: 1000;
+}
+
+.no_order{
+    color: white;
+    padding: 7px 10px;
+    background-color: orange;
+    border-radius: 10px;
+    border: 3px solid white;
+    color: rgb(43, 42, 42);
+    transition: all 150ms ease-in;
+       cursor: pointer;
+}
+.no_order:hover{
+      background-color: rgba(255, 166, 0, 0.627);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body {
+        align-items: center;
+    }
+
+    .center-contact {
+        margin-top: 60px;
+        padding: 0 10px;
+    }
+
+    .contact-content {
+        height: auto;
+        padding: 10px;
+    }
+}

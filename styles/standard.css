@@ -1,11 +1,9 @@
 /* Body Standards */
 :root {
-
     --farbe-hintergrund: #fdf6e3fd;
     --farbe-hintergrund2: #e6dfb7;
     --farbe-shoppingBAsket: #e6d8cb;
     --color_whit: white;
-
     /* fonts */
     --main-font: 'InterCustom', sans-serif;
 }
@@ -23,10 +21,12 @@ body {
     width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
     box-sizing: border-box;
     font-size: 16px;
     font-family: var(--main-font);
-background-color: var(--farbe-hintergrund);
+    background-color: var(--farbe-hintergrund);
 }
 
 .standard_display_gap {
@@ -45,4 +45,10 @@ background-color: var(--farbe-hintergrund);
     border-top: 3px solid black;
     background-color: lightgray;
     /* nur zum Testen sichtbar */
+}
+
+@media(max-width: 1135px) {
+    .seperateur {
+        display: none;
+    }
 }

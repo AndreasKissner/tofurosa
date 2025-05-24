@@ -5,27 +5,20 @@ function setDelivery(type) {
     renderBasketCart();
 }
 
-
 function updateArticle(category, name, action) {
     let item = myMenu[category].find(p => p.name === name);
     if (!item) return;
-
     if (action === "add") {
         item.amount++;
     }
-
     if (action === "remove" && item.amount > 0) {
         item.amount--;
     }
-
     if (action === "clear") {
         item.amount = 0;
     }
-
     renderBasketCart();
 }
-
-
 
 function clearBasket() {
     for (let cat in myMenu) {
@@ -34,11 +27,20 @@ function clearBasket() {
     renderBasketCart();
 }
 
+//Emai Logig
+function sendMail(event){
+    event.preventDefault();
+    const data = new FormData(event.target);
 
-
-/* window.setDelivery = setDelivery;
-window.clearBasket = clearBasket;
-window.clearProduct = clearProduct; // damit onclick funktioniert
-window.addArticle = addArticle;
-window.removeArticle = removeArticle;
-window. initBasketToggle =  initBasketToggle; */
+    fetch("https://formspree.io/f/mjkykvka", {
+        method: "POST",
+        body: new FormData(event.target),
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(() => {
+        window.location.href = "./send_mail.html";
+    }).catch((error) => {
+        console.log(error);
+    });
+}

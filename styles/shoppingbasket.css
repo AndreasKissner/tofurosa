@@ -9,19 +9,16 @@
     max-width: 365px;
     max-height: 77vh;
     overflow-y: auto;
-    /*    z-index: 2000; */
 }
 
 .basket {
     position: sticky;
     top: 0;
     background-color: var(--farbe-shoppingBAsket);
-
     width: 100%;
 }
 
 .pick_up {
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,7 +43,6 @@
     flex-direction: column;
 }
 
-
 .map-box-style {
     max-width: 100%;
     width: 130px;
@@ -63,7 +59,6 @@
     margin: 10px 0;
     text-align: center;
 }
-
 
 .img_counter_price_trash {
     display: flex;
@@ -136,6 +131,7 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
+    gap: 10px;
 }
 
 .total_cost_content {
@@ -161,7 +157,6 @@
     font-weight: bold;
 }
 
-
 .basket_toggle_btn {
     display: none;
     position: fixed;
@@ -176,6 +171,7 @@
     border: none;
     z-index: 10000;
     cursor: pointer;
+    margin-top: 30px;
 }
 
 @media (max-width: 680px) {
@@ -187,21 +183,17 @@
         display: block;
         position: fixed;
         bottom: 50px;
-        /* Platz für schwarzen Button */
         left: 50%;
         transform: translateX(-50%);
         width: 95%;
-        /* oder 100% mit max-width */
         max-width: 365px;
         max-height: 50vh;
         overflow-y: auto;
         background-color: var(--farbe-shoppingBAsket);
         z-index: 9999;
-        padding: 10px;
         box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1);
         border-top: 2px solid #000;
         border-radius: 10px 10px 0 0;
-        /* optional: runde Ecken oben */
         margin-top: auto;
     }
 
@@ -209,3 +201,48 @@
         display: block;
     }
 }
+
+.order_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+.no_order{
+    color: white;
+    padding: 7px 10px;
+    background-color: orange;
+    border-radius: 10px;
+    border: 3px solid white;
+    color: rgb(43, 42, 42);
+    transition: all 150ms ease-in;
+       cursor: pointer;
+}
+.no_order:hover{
+      background-color: rgba(255, 166, 0, 0.627);
+}
+
+/* .hidden {
+  display: none;
+}
+
+#dialogOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialogBox {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px black;
+  text-align: center;
+}
+ */

@@ -66,7 +66,7 @@ let myMenu = {
       image: "drinks/goldenCocktail.png"
     },
     {
-      name: "Jack's Tofu Whiskey",
+      name: "Jack`s Tofu Whiskey",
       price: 7.20,
       description: "Whiskey-inspired tofu drink with bold smoky flavor.",
       amount: 0,
@@ -132,7 +132,3 @@ let myMenu = {
     }
   ]
 };
-
-console.table(myMenu);
-
-console.table(myMenu);

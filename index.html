@@ -9,17 +9,12 @@
   <link rel="stylesheet" href="./styles/fonts.css?v=1.0">
   <link rel="stylesheet" href="style.css?v=1.0">
   <link rel="stylesheet" href="./styles/assets.css?v=1.0">
-
   <link rel="stylesheet" href="./styles/shoppingbasket.css?v=1.0">
   <link rel="stylesheet" href="./styles/articlecontainer.css">
   <link rel="icon" type="image/png" href="assets/icons/tofuflavicon.png">
-
-
-
 </head>
 
 <body>
-
   <header id="header" class="header_content">
 
     <img class="logo_img" src="./assets/img/logo.png" alt="Logo Tofurosa">
@@ -36,14 +31,11 @@
           <li><a href="#menue_jumping">Menü</a></li>
           <li><a href="#drinks_jump">Drinks</a></li>
           <li><a href="#beilage_jumping">Supplements</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
     </nav>
   </header>
-
-
-
 
   <div class="wrapper_container">
     <div id="main_content">
@@ -70,19 +62,14 @@
             </div>
             <div id="render_basket_shop"></div>
             <div class="pick_or_delivery">
-              <button onclick="setDelivery('delivery')" id="btn_pick_up" class="btn">Delivery</button>
-              <button onclick="setDelivery('pickup')" id="btn_devlivery" class="btn">Pickup</button>
+              <button onclick="setDelivery('delivery')" id="btn_pick_up" class="no_order">Delivery</button>
+              <button onclick="setDelivery('pickup')" id="btn_devlivery" class="no_order">Pickup</button>
             </div>
-
             <!-- Basket Render-->
             <div id="img_price_amount_items"></div>
           </div>
-          
+
         </div>
-
-
-
-
 
         <div class="article_basket_box" id="menue_jumping">
           <h1 class="title_dishes">Menu</h1>
@@ -101,18 +88,8 @@
       </div>
     </div>
   </div>
-     <button id="toggleBasketBtn" class="basket_toggle_btn">SHOW SHOPPING CART</button>
 
-  <!--   <footer class="standard_display_gap">
-      <img class="logo_img_footer" src="./assets/img/logo.png" alt="Logo Tofurosa">
-      <ul class="standard_display_gap">
-        <li><a href="">Impressum</a></li>
-        <li><a href="">Fan Shop</a></li>
-        <li><a href="">Partners</a></li>
-      </ul>
-  </footer>
- -->
-
+  <button id="toggleBasketBtn" class="basket_toggle_btn">SHOW SHOPPING CART</button>
 
   <script src="./scripts/template.js"></script>
   <script src="./scripts/render.js"></script>
@@ -120,5 +97,4 @@
   <script src="script.js?v=1.0"></script>
   <script src="scripts/toggle.js"></script>
 </body>
-
 </html>
