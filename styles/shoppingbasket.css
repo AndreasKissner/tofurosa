@@ -200,6 +200,9 @@
     .basket_toggle_btn {
         display: block;
     }
+    .pick_up {
+ display:none;
+}
 }
 
 .order_content{

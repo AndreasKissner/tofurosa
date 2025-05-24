@@ -126,7 +126,8 @@ function getBasketSummaryTemplate(subtotal) {
          <button onclick="clearBasket()" class="btn_counter_commande">
         <img class="icon_commade_btn" src="assets/icons/trash.png" alt="Trash Icon">
       </button>
-     <button id="no_order_overlay" class="no_order">Order</button>
+    <button onclick="openOrderOverlay()">ORDER</button>
+
      </div>
     </div>`;
 }

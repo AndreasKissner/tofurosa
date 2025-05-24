@@ -18,7 +18,11 @@
   <header id="header" class="header_content">
 
     <img class="logo_img" src="./assets/img/logo.png" alt="Logo Tofurosa">
-
+     <!--  <button type="button" id="reset">Reset</button>
+        <div id="counter_layout">
+            <label for="counter_value">Besucher:</label>
+            <span id="counter_value"></span>
+        </div>  -->
     <nav class="navi">
       <button type="button" class="toggle_button">
         <span class="bar"></span>
@@ -62,8 +66,8 @@
             </div>
             <div id="render_basket_shop"></div>
             <div class="pick_or_delivery">
-              <button onclick="setDelivery('delivery')" id="btn_pick_up" class="no_order">Delivery</button>
-              <button onclick="setDelivery('pickup')" id="btn_devlivery" class="no_order">Pickup</button>
+              <button type="button" onclick="setDelivery('delivery')" id="btn_pick_up" class="no_order">Delivery</button>
+              <button type="button" onclick="setDelivery('pickup')" id="btn_devlivery" class="no_order">Pickup</button>
             </div>
             <!-- Basket Render-->
             <div id="img_price_amount_items"></div>
@@ -91,7 +95,7 @@
 
 
 
-  <button id="toggleBasketBtn" class="basket_toggle_btn">SHOW SHOPPING CART</button>
+  <button type="button" id="toggleBasketBtn" class="basket_toggle_btn">SHOW SHOPPING CART</button>
 
   <script src="./scripts/template.js"></script>
   <script src="./scripts/render.js"></script>

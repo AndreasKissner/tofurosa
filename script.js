@@ -45,3 +45,24 @@ function sendMail(event) {
         console.log(error);
     });
 }
+
+//
+/* let count = 0;
+
+let countValue = document.getElementById("counter_value");
+
+function incrementCounter(){
+count  = Number(localStorage.getItem("count"));
+countValue.innerText = count;
+localStorage.setItem("count", count + 1)
+}
+
+
+window.onload = incrementCounter();
+
+let btnReset = document.getElementsByTagName("button")[0];
+btnReset.addEventListener("click",() =>{
+    localStorage.setItem("count", 0);
+    incrementCounter();
+    alert("Alle Daten wurden geläscht")
+}); */
