@@ -40,7 +40,7 @@ function sendMail(event) {
             'Accept': 'application/json'
         }
     }).then(() => {
-        window.location.href = "./html/sendmail.html";
+        window.location.href = "../html/sendmail.html";
     }).catch((error) => {
         console.log(error);
     });

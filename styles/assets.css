@@ -1,9 +1,15 @@
 
+
+.plus_count_minus{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
 .btn_counter,
 .btn_counter_remove,.counter_display{
-    position: absolute;
-    top: 211px;
-    right: 5px;
+ 
+   
     display: flex;
     align-items: center;
     justify-content: center;
@@ -46,8 +52,7 @@
 }
 
  .counter_display{
-  top: 225px;
-    right: 114px;
+width: 30px;
     background-color: white;
     border: 2px solid #121010;
     padding: 1px 7px;

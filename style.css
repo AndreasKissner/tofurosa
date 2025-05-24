@@ -171,7 +171,7 @@ color: white;
   padding: 10px 0;
   position: absolute;
   top: 93px; /* Höhe deines festen Headers */
-  left: 43%;
+  left: 50%;
   transform: translateX(-50%);
   background-color: var(--farbe-hintergrund);
   z-index: 1500; /* liegt über dem Content, unter dem Header */

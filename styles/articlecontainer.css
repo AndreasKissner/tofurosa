@@ -1,7 +1,9 @@
 .article_basket_box {
     position: sticky;
     top: 125px;
+
     width: calc(100% - 300px);
+    
 }
 
 .arcticle_container_style_all,
@@ -44,7 +46,7 @@
     object-fit: cover;
     display: block;
     width: 250px;
-    height: 250px;
+    height: 210px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -54,9 +56,16 @@
 .drink_price_style,
 .name_style_drink,
 .name_style_beilage,
-.beilage_price_style {
+.beilage_price_style,
+.description_style_article {
     margin-top: 5px;
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.description_style_article{
+font-size: 16px;
+
 }
 
 
