@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TofuRosa</title>
   <link rel="stylesheet" href="./styles/standard.css?v=1.1">
+
   <link rel="stylesheet" href="./styles/fonts.css?v=1.0">
   <link rel="stylesheet" href="style.css?v=1.0">
   <link rel="stylesheet" href="./styles/assets.css?v=1.0">
@@ -35,6 +36,8 @@
       </div>
     </nav>
   </header>
+  <img src="assets/img/logoround.png" alt="Rundes Logo" class="logo_round" id="logo_round_time">
+
 
   <div class="wrapper_container">
     <div id="main_content">
@@ -61,7 +64,8 @@
             </div>
             <div id="render_basket_shop"></div>
             <div class="pick_or_delivery">
-              <button type="button" onclick="setDelivery('delivery')" id="btn_pick_up" class="no_order">Delivery</button>
+              <button type="button" onclick="setDelivery('delivery')" id="btn_pick_up"
+                class="no_order">Delivery</button>
               <button type="button" onclick="setDelivery('pickup')" id="btn_devlivery" class="no_order">Pickup</button>
             </div>
             <!-- Basket Render-->
@@ -70,26 +74,46 @@
 
         </div>
 
-        <div class="article_basket_box" id="menue_jumping">
+        <div class="article_basket_box">
+          <div id="menue_jumping"></div>
           <h1 class="title_dishes">Menu</h1>
           <section id="article_container_all" class="arcticle_container_style_all"></section>
 
-          <div class="seperateur" id="drinks_jump"></div>
+          <div class="seperateur"></div>
+          <div id="drinks_jump"></div>
           <h1 class="title_dishes">Drinks</h1>
           <section id="drink_container_all" class="drink_container_style_all"></section>
 
-
-          <div class="seperateur" id="beilage_jumping"></div>
+          <div class="seperateur"></div>
+          <div id="beilage_jumping"></div>
           <h1 class="title_dishes">Supplements</h1>
           <section id="beilage_container_all" class="beilage_container_style_all"></section>
           <div class="seperateur"></div>
         </div>
       </div>
     </div>
+
+    <footer>
+      <img class="logo_img" src="assets/img/logo.png" alt="Logo Tofurosa">
+      <p class="footer_text">
+        The World of Tofu and 5 Stars Dinners
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+      </p>
+    </footer>
   </div>
 
+
+
   <button type="button" id="toggleBasketBtn" class="basket_toggle_btn">SHOW SHOPPING CART</button>
-<script src="./scripts/localstorage.js"></script>
+
+  <div id="overlay_order" class="order_overlay d_none"></div>
+
+
+  <script src="./scripts/localstorage.js"></script>
   <script src="./scripts/template.js"></script>
   <script src="./scripts/render.js"></script>
   <script src="./scripts/datenbank.js?v=1.0"></script>
@@ -98,4 +122,3 @@
 </body>
 
 </html>
-

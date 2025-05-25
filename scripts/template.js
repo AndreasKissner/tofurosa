@@ -4,32 +4,29 @@ function getRandomProductsItems(productArr) {
     <div class="container_article">
       <div class="article_img_box">
         <img class="img_article" src="assets/img/${productArr.image}" alt="">
-
+          <p class="footer_text avi_star">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+      </p>
         <div class="plus_count_minus">
-<button onclick="updateArticle('products', '${productArr.name}', 'remove')" id="counter_button_add" class="btn_counter">
-  <img src="assets/icons/remove.svg" alt="remove" class="btn_counter_img">
-</button>
-
-<span id="amount_products_${id}" class="counter_display">${productArr.amount} </span>
-
-<button onclick="updateArticle('products', '${productArr.name}', 'add')" id="counter_button_remove"
-  class="btn_counter_remove">
-  <img src="assets/icons/add.svg" alt="add" class="btn_counter_img">
-</button>
-</div>
-
-
+             <button onclick="updateArticle('products', '${productArr.name}', 'remove')" id="counter_button_add" class="btn_counter">
+             <img src="assets/icons/remove.svg" alt="remove" class="btn_counter_img">
+             </button>
+      <span id="amount_products_${id}" class="counter_display">${productArr.amount} </span>
+            <button onclick="updateArticle('products', '${productArr.name}', 'add')" id="counter_button_remove"
+       class="btn_counter_remove">
+             <img src="assets/icons/add.svg" alt="add" class="btn_counter_img">
+            </button>
+    </div>
         <div class="name_style_article">${productArr.name}</div>
         <div class="description_style_article">${productArr.description}</div>
         <div class="article_price_style">Price: ${productArr.price.toFixed(2)}</div>
-
-     
-        
-     
       </div>
     </div>`;
 }
-
 
 function getRandomDrinksItems(drinksArr) {
   const id = drinksArr.name.replace(/\s+/g, "_");
@@ -37,27 +34,31 @@ function getRandomDrinksItems(drinksArr) {
     <div class="drinks_container">
       <div class="drinks_img_box">
         <img class="img_drink" src="assets/img/${drinksArr.image}" alt="">
+             <p class="footer_text avi_star">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+      </p>
           <div class="plus_count_minus">
-<button onclick="updateArticle('products', '${drinksArr.name}', 'remove')" id="counter_button_add" class="btn_counter">
-  <img src="assets/icons/remove.svg" alt="remove" class="btn_counter_img">
-</button>
+      <button onclick="updateArticle('drinks', '${drinksArr.name}', 'remove')" id="counter_button_add" class="btn_counter">
+     <img src="assets/icons/remove.svg" alt="remove" class="btn_counter_img">
+    </button>
 
-<span id="amount_drinks_${id}" class="counter_display">${drinksArr.amount} </span>
+    <span id="amount_drinks_${id}" class="counter_display">${drinksArr.amount} </span>
 
-<button onclick="updateArticle('drinks', '${drinksArr.name}', 'add')" id="counter_button_remove"
-  class="btn_counter_remove">
-  <img src="assets/icons/add.svg" alt="add" class="btn_counter_img">
-</button>
-</div>
+      <button onclick="updateArticle('drinks', '${drinksArr.name}', 'add')" id="counter_button_remove"
+     class="btn_counter_remove">
+     <img src="assets/icons/add.svg" alt="add" class="btn_counter_img">
+      </button>
+      </div>
         <div class="name_style_drink">${drinksArr.name}</div>
         <div class="description_style_drink">${drinksArr.description}</div>
         <div class="drink_price_style">Price: ${drinksArr.price.toFixed(2)} $</div>
-
-
       </div>
     </div>`;
 }
-
 
 function getRandomSubbTemplate(subbArr) {
   const id = subbArr.name.replace(/\s+/g, "_");
@@ -65,6 +66,13 @@ function getRandomSubbTemplate(subbArr) {
     <div class="beilage_container">
       <div class="beilage_img_box">
         <img class="img_beilage" src="assets/img/${subbArr.image}" alt="">
+             <p class="footer_text avi_star">
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+        <span class="star">&#9733;</span>
+      </p>
 
         <div class="plus_count_minus">
           <button onclick="updateArticle('supplements', '${subbArr.name}', 'remove')" class="btn_counter">
@@ -85,31 +93,29 @@ function getRandomSubbTemplate(subbArr) {
     </div>`;
 }
 
-
 function getBasketItemTemplate(cat, item) {
     return `
     <div class="img_counter_price_trash">
-      <div class="basket_tofu_img_style">
-        <img class="basket_img_test standard_border_radius" src="assets/img/${item.image}" alt="">
-      </div>
-      <div class="name_price_container">
-        <div class="name_of_tofu_style">${item.name}</div>
-        <div class="price_total_style">${(item.price * item.amount).toFixed(2)} $</div>
-      </div>
-    
-      <div class="plus_minus_amount">
-  <button onclick="updateArticle('${cat}', '${item.name}', 'remove')" class="btn_counter_commande">
-    <img class="icon_commade_btn" src="./assets/icons/remove.svg" alt="">
-  </button>
-  <div class="amount_output_style">${item.amount}</div>
-  <button onclick="updateArticle('${cat}', '${item.name}', 'add')" class="btn_counter_commande">
-    <img class="icon_commade_btn" src="./assets/icons/add.svg" alt="">
-  </button>
-  <button onclick="updateArticle('${cat}', '${item.name}', 'clear')" class="btn_counter_commande">
-    <img class="icon_commade_btn" src="assets/icons/trash.png" alt="Trash Icon">
-  </button>
-</div>
-</div>`;;
+  <div class="basket_tofu_img_style">
+    <img class="basket_img_test standard_border_radius" src="assets/img/${item.image}" alt="">
+  </div>
+  <div class="name_price_container">
+    <div class="name_of_tofu_style">${item.name}</div>
+    <div class="price_total_style">${(item.price * item.amount).toFixed(2)} $</div>
+  </div>
+  <div class="plus_minus_amount">
+    <button onclick="updateArticle('${cat}', '${item.name}', 'remove')" class="btn_counter_commande">
+      <img class="icon_commade_btn" src="./assets/icons/remove.svg" alt="">
+    </button>
+    <div class="amount_output_style">${item.amount}</div>
+    <button onclick="updateArticle('${cat}', '${item.name}', 'add')" class="btn_counter_commande">
+      <img class="icon_commade_btn" src="./assets/icons/add.svg" alt="">
+    </button>
+    <button onclick="updateArticle('${cat}', '${item.name}', 'clear')" class="btn_counter_commande">
+      <img class="icon_commade_btn" src="assets/icons/trash.png" alt="Trash Icon">
+    </button>
+  </div>
+</div>`;
 }
 
 function getBasketSummaryTemplate(subtotal) {
@@ -126,10 +132,28 @@ function getBasketSummaryTemplate(subtotal) {
          <button onclick="clearBasket()" class="btn_counter_commande">
         <img class="icon_commade_btn" src="assets/icons/trash.png" alt="Trash Icon">
       </button>
-    <button onclick="openOrderOverlay()">ORDER</button>
+    <button class="no_order" onclick="renderOverlayOrder()">ORDER</button>
+   
 
      </div>
     </div>`;
+}
+
+function getOverlayOrderTemplate() {
+  const { itemsHTML, subtotal } = generateOverlayOrderItems();
+  const shipping = deliveryType === "delivery" ? 5 : 0;
+  const total = subtotal + shipping;
+  const deliveryLabel = deliveryType === "delivery" ? "Delivery" : "Pickup";
+  return `
+    <div class="order_box">
+      <h2 class="text_order_test">Thanks for Test your order!</h2>
+      <div class="order_items_list">${itemsHTML}</div>
+      <p><strong>Subtotal:</strong> ${subtotal.toFixed(2)} $</p>
+      <p><strong>Shipping (${deliveryLabel}):</strong> ${shipping.toFixed(2)} $</p>
+      <p><strong>Total:</strong> ${total.toFixed(2)} $</p>
+      <button onclick="closeOrderOverlay()" class="close_overlay_btn">Close</button>
+    </div>
+  `;
 }
 
 window.addEventListener("load", () => {

@@ -1,5 +1,4 @@
-
-.email-center{
+.email-center {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,12 +6,10 @@
 }
 
 .send_mail_text {
-    background-color:transparent;
+    background-color: transparent;
     font-size: 32px;
 }
 
-
-/* Link-Stil, z. B. für "Jetzt reservieren" */
 .links-content_mail {
     background-color: transparent;
     border: none;
@@ -28,7 +25,7 @@
 .links-content_mail:hover {
     color: white;
     background-color: orange;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
     border-radius: 8px;
 }

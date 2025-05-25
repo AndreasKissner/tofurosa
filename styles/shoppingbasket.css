@@ -4,11 +4,12 @@
 
 .basket_wrapper {
     position: sticky;
-    top: 125px;
+    top: 102px;
     width: 100%;
     max-width: 365px;
     max-height: 77vh;
     overflow-y: auto;
+    padding-bottom: 110px;
 }
 
 .basket {
@@ -102,7 +103,6 @@
 }
 
 .plus_minus_amount {
-    border: 2px solid black;
     padding: 8px;
     display: flex;
     justify-content: center;
@@ -173,6 +173,8 @@
     cursor: pointer;
     margin-top: 30px;
 }
+
+
 
 @media (max-width: 680px) {
     .basket_wrapper {

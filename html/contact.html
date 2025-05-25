@@ -5,19 +5,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TofuRosa</title>
-
   <link rel="stylesheet" href="../styles/standard.css">
   <link rel="stylesheet" href="../styles/contact.css?v=1.1">
   <link rel="stylesheet" href="../styles/fonts.css?v=1.0">
   <link rel="stylesheet" href="../style.css?v=1.0">
   <link rel="stylesheet" href="../styles/assets.css?v=1.0">
-
-
   <link rel="icon" type="image/png" href="../assets/icons/tofuflavicon.png">
-
 </head>
 
-<body>
+<body class="page_contact">
 
 <div class="video-background">
   <video autoplay muted loop playsinline>
@@ -27,16 +23,13 @@
 </div>
 
   <header id="header" class="header_content">
-
     <img class="logo_img" src="../assets/img/logo.png" alt="Logo Tofurosa">
-
     <nav class="navi">
       <button type="button" class="toggle_button">
         <span class="bar"></span>
         <span class="bar"></span>
         <span class="bar"></span>
       </button>
-
       <div class="list_container" id="list_cont">
         <ul>
           <li><a href="../index.html#menue_jumping">Menü</a></li>
@@ -51,39 +44,29 @@
     <div class="center-contact">
       <div class="contact-content">
         <h1 class="title-contact">Get in touch with us for questions or ideas</h1>
-
         <form onsubmit="sendMail(event)">
           <!-- Name-Feld -->
           <div class="contact-fields-general">
             <label for="input-name-field" class="label_name">Your Name:</label>
             <input id="input-name-field" class="input-field-style" type="text" name="From:" maxlength="50" required
               aria-label="Ihr Name">
-
           </div>
-
-
           <div class="contact-fields-general">
             <label for="input-email-field" class="label_name">Your E-Mail:</label>
             <input id="input-email-field" class="input-field-style" type="email" name="Email:" maxlength="254" required
               inputmode="email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" aria-label="Ihre E-Mail-Adresse">
             <!-- 254 Zeichen – technische Maximalgrenze für E-Mail-Adressen -->
           </div>
-
-
           <div class="contact-fields-general">
             <label for="input-textarea-field" class="label_name">Your Message:</label>
             <textarea id="input-textarea-field" class="input-field-style" name="Message:" maxlength="500" required
               aria-label="Ihre Nachricht"></textarea>
-
           </div>
-
-
           <button id="btn-send-message" class="no_order" type="submit">Send</button>
         </form>
       </div>
     </div>
   </div>
-
 
   <footer>
     <img class="logo_img" src="../assets/img/logo.png" alt="Logo Tofurosa">
@@ -95,9 +78,7 @@
   <span class="star">&#9733;</span>
   <span class="star">&#9733;</span>
 </p>
-
   </footer>
-
 
   <script src="../script.js"></script>
   <script src="../scripts/toggle.js"></script>

@@ -3,7 +3,7 @@ let myMenu = {
     {
       name: "Tofu Lasagna",
       price: 12.90,
-      description: "Homemade tofu lasagna with fresh vegetables and tomato sauce.",
+      description: "Homemade lasagna with fresh vegetables tomato sauce.",
       amount: 0,
       image: "gerichte/lasagne.png"
     },

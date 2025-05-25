@@ -21,30 +21,10 @@ function renderBasketCart() {
   basket.innerHTML += getBasketSummaryTemplate(subtotal);
 }
 
-//ALte version
-/* function renderBasketCart() {
-  const basket = document.getElementById("img_price_amount_items");
-  basket.innerHTML = "";
-  let subtotal = 0;
-
-  let categories = Object.keys(myMenu); // ["products", "drinks", "supplements"]
-
-  for (let i = 0; i < categories.length; i++) {
-    let cat = categories[i];
-    let items = myMenu[cat];
-
-    for (let j = 0; j < items.length; j++) {
-      let item = items[j];
-      if (item.amount > 0) {
-        subtotal += item.price * item.amount;
-        basket.innerHTML += getBasketItemTemplate(cat, item);
-      }
-    }
-  }
-
-  basket.innerHTML += getBasketSummaryTemplate(subtotal);
+function renderOverlayOrder() {
+  document.getElementById("overlay_order").innerHTML = getOverlayOrderTemplate();
+  document.getElementById("overlay_order").classList.remove("d_none");
 }
- */
 
 document.addEventListener("DOMContentLoaded", () => {
   loadFromLocalStorage();
@@ -53,4 +33,3 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAllItems("beilage_container_all", myMenu.supplements, getRandomSubbTemplate);
   renderBasketCart();
 });
-F
